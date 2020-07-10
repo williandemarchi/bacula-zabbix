@@ -1,0 +1,1027 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zabbix_export>
+    <version>4.4</version>
+    <date>2020-05-05T17:40:57Z</date>
+    <groups>
+        <group>
+            <name>Templates</name>
+        </group>
+    </groups>
+    <templates>
+        <template>
+            <template>Template Bacula</template>
+            <name>Template Bacula</name>
+            <groups>
+                <group>
+                    <name>Templates</name>
+                </group>
+            </groups>
+            <applications>
+                <application>
+                    <name>Bacula</name>
+                </application>
+            </applications>
+            <items>
+                <item>
+                    <name>Backup Differential Bytes</name>
+                    <type>TRAP</type>
+                    <key>bacula.diff.job.bytes</key>
+                    <delay>0</delay>
+                    <units>B</units>
+                    <applications>
+                        <application>
+                            <name>Bacula</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Backup Differential Compression</name>
+                    <type>TRAP</type>
+                    <key>bacula.diff.job.compr</key>
+                    <delay>0</delay>
+                    <value_type>FLOAT</value_type>
+                    <applications>
+                        <application>
+                            <name>Bacula</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Backup Differential Files</name>
+                    <type>TRAP</type>
+                    <key>bacula.diff.job.files</key>
+                    <delay>0</delay>
+                    <applications>
+                        <application>
+                            <name>Bacula</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Backup Differential Speed</name>
+                    <type>TRAP</type>
+                    <key>bacula.diff.job.speed</key>
+                    <delay>0</delay>
+                    <value_type>FLOAT</value_type>
+                    <units>KB/s</units>
+                    <applications>
+                        <application>
+                            <name>Bacula</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Backup Differential OK</name>
+                    <type>TRAP</type>
+                    <key>bacula.diff.job.status</key>
+                    <delay>0</delay>
+                    <applications>
+                        <application>
+                            <name>Bacula</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{last()}&gt;1</expression>
+                            <name>Backup Differential FAIL in {HOST.NAME}</name>
+                            <priority>AVERAGE</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>Backup Differential Time</name>
+                    <type>TRAP</type>
+                    <key>bacula.diff.job.time</key>
+                    <delay>0</delay>
+                    <units>s</units>
+                    <applications>
+                        <application>
+                            <name>Bacula</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Backup Full Bytes</name>
+                    <type>TRAP</type>
+                    <key>bacula.full.job.bytes</key>
+                    <delay>0</delay>
+                    <units>B</units>
+                    <applications>
+                        <application>
+                            <name>Bacula</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Backup Full Compression</name>
+                    <type>TRAP</type>
+                    <key>bacula.full.job.compr</key>
+                    <delay>0</delay>
+                    <value_type>FLOAT</value_type>
+                    <applications>
+                        <application>
+                            <name>Bacula</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Backup Full Files</name>
+                    <type>TRAP</type>
+                    <key>bacula.full.job.files</key>
+                    <delay>0</delay>
+                    <applications>
+                        <application>
+                            <name>Bacula</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Backup Full Speed</name>
+                    <type>TRAP</type>
+                    <key>bacula.full.job.speed</key>
+                    <delay>0</delay>
+                    <value_type>FLOAT</value_type>
+                    <units>KB/s</units>
+                    <applications>
+                        <application>
+                            <name>Bacula</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Backup Full OK</name>
+                    <type>TRAP</type>
+                    <key>bacula.full.job.status</key>
+                    <delay>0</delay>
+                    <applications>
+                        <application>
+                            <name>Bacula</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{last()}&gt;1</expression>
+                            <name>Backup Full FAIL in {HOST.NAME}</name>
+                            <priority>HIGH</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>Backup Full Time</name>
+                    <type>TRAP</type>
+                    <key>bacula.full.job.time</key>
+                    <delay>0</delay>
+                    <units>s</units>
+                    <applications>
+                        <application>
+                            <name>Bacula</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Backup Incremental Bytes</name>
+                    <type>TRAP</type>
+                    <key>bacula.incr.job.bytes</key>
+                    <delay>0</delay>
+                    <units>B</units>
+                    <applications>
+                        <application>
+                            <name>Bacula</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Backup Incremental Compression</name>
+                    <type>TRAP</type>
+                    <key>bacula.incr.job.compr</key>
+                    <delay>0</delay>
+                    <value_type>FLOAT</value_type>
+                    <applications>
+                        <application>
+                            <name>Bacula</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Backup Incremental Files</name>
+                    <type>TRAP</type>
+                    <key>bacula.incr.job.files</key>
+                    <delay>0</delay>
+                    <applications>
+                        <application>
+                            <name>Bacula</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Backup Incremental Speed</name>
+                    <type>TRAP</type>
+                    <key>bacula.incr.job.speed</key>
+                    <delay>0</delay>
+                    <value_type>FLOAT</value_type>
+                    <units>KB/s</units>
+                    <applications>
+                        <application>
+                            <name>Bacula</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Backup Incremental OK</name>
+                    <type>TRAP</type>
+                    <key>bacula.incr.job.status</key>
+                    <delay>0</delay>
+                    <applications>
+                        <application>
+                            <name>Bacula</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{last()}&gt;1</expression>
+                            <name>Backup Incremental FAIL in {HOST.NAME}</name>
+                            <priority>WARNING</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>Backup Incremental Time</name>
+                    <type>TRAP</type>
+                    <key>bacula.incr.job.time</key>
+                    <delay>0</delay>
+                    <units>s</units>
+                    <applications>
+                        <application>
+                            <name>Bacula</name>
+                        </application>
+                    </applications>
+                </item>
+                <item>
+                    <name>Bacula Director is running</name>
+                    <key>proc.num[{$BACULA.DIR}]</key>
+                    <delay>30s;50/1-7,00:00-24:00</delay>
+                    <applications>
+                        <application>
+                            <name>Bacula</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{last()}=0</expression>
+                            <name>Bacula Director is DOWN in {HOST.NAME}</name>
+                            <priority>DISASTER</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>Bacula File is running</name>
+                    <key>proc.num[{$BACULA.FD}]</key>
+                    <delay>30s;50s/1-7,00:00-24:00</delay>
+                    <applications>
+                        <application>
+                            <name>Bacula</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{last()}=0</expression>
+                            <name>Bacula File is DOWN in {HOST.NAME}</name>
+                            <priority>HIGH</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+                <item>
+                    <name>Bacula Storage is running</name>
+                    <key>proc.num[{$BACULA.SD}]</key>
+                    <delay>30s;50s/1-7,00:00-24:00</delay>
+                    <applications>
+                        <application>
+                            <name>Bacula</name>
+                        </application>
+                    </applications>
+                    <triggers>
+                        <trigger>
+                            <expression>{last()}=0</expression>
+                            <name>Bacula Storage is DOWN in {HOST.NAME}</name>
+                            <priority>DISASTER</priority>
+                        </trigger>
+                    </triggers>
+                </item>
+            </items>
+            <macros>
+                <macro>
+                    <macro>{$BACULA.DIR}</macro>
+                    <value>bacula-dir</value>
+                </macro>
+                <macro>
+                    <macro>{$BACULA.FD}</macro>
+                    <value>bacula-fd</value>
+                </macro>
+                <macro>
+                    <macro>{$BACULA.SD}</macro>
+                    <value>bacula-sd</value>
+                </macro>
+            </macros>
+            <screens>
+                <screen>
+                    <name>Backup Differential</name>
+                    <hsize>2</hsize>
+                    <vsize>3</vsize>
+                    <screen_items>
+                        <screen_item>
+                            <resourcetype>0</resourcetype>
+                            <style>0</style>
+                            <resource>
+                                <name>Backup Differential - Bytes transferred</name>
+                                <host>Template Bacula</host>
+                            </resource>
+                            <width>500</width>
+                            <height>100</height>
+                            <x>0</x>
+                            <y>0</y>
+                            <colspan>1</colspan>
+                            <rowspan>1</rowspan>
+                            <elements>0</elements>
+                            <valign>0</valign>
+                            <halign>0</halign>
+                            <dynamic>0</dynamic>
+                            <sort_triggers>0</sort_triggers>
+                            <url/>
+                            <application/>
+                            <max_columns>3</max_columns>
+                        </screen_item>
+                        <screen_item>
+                            <resourcetype>0</resourcetype>
+                            <style>0</style>
+                            <resource>
+                                <name>Backup Differential - Files transferred</name>
+                                <host>Template Bacula</host>
+                            </resource>
+                            <width>500</width>
+                            <height>100</height>
+                            <x>1</x>
+                            <y>0</y>
+                            <colspan>1</colspan>
+                            <rowspan>1</rowspan>
+                            <elements>0</elements>
+                            <valign>0</valign>
+                            <halign>0</halign>
+                            <dynamic>0</dynamic>
+                            <sort_triggers>0</sort_triggers>
+                            <url/>
+                            <application/>
+                            <max_columns>3</max_columns>
+                        </screen_item>
+                        <screen_item>
+                            <resourcetype>0</resourcetype>
+                            <style>0</style>
+                            <resource>
+                                <name>Backup Differential - Elapsed time</name>
+                                <host>Template Bacula</host>
+                            </resource>
+                            <width>500</width>
+                            <height>100</height>
+                            <x>0</x>
+                            <y>1</y>
+                            <colspan>1</colspan>
+                            <rowspan>1</rowspan>
+                            <elements>0</elements>
+                            <valign>0</valign>
+                            <halign>0</halign>
+                            <dynamic>0</dynamic>
+                            <sort_triggers>0</sort_triggers>
+                            <url/>
+                            <application/>
+                            <max_columns>3</max_columns>
+                        </screen_item>
+                        <screen_item>
+                            <resourcetype>0</resourcetype>
+                            <style>0</style>
+                            <resource>
+                                <name>Backup Differential - Transfer rate</name>
+                                <host>Template Bacula</host>
+                            </resource>
+                            <width>500</width>
+                            <height>100</height>
+                            <x>1</x>
+                            <y>1</y>
+                            <colspan>1</colspan>
+                            <rowspan>1</rowspan>
+                            <elements>0</elements>
+                            <valign>0</valign>
+                            <halign>0</halign>
+                            <dynamic>0</dynamic>
+                            <sort_triggers>0</sort_triggers>
+                            <url/>
+                            <application/>
+                            <max_columns>3</max_columns>
+                        </screen_item>
+                        <screen_item>
+                            <resourcetype>0</resourcetype>
+                            <style>0</style>
+                            <resource>
+                                <name>Backup Differential - Compression rate</name>
+                                <host>Template Bacula</host>
+                            </resource>
+                            <width>500</width>
+                            <height>100</height>
+                            <x>0</x>
+                            <y>2</y>
+                            <colspan>1</colspan>
+                            <rowspan>1</rowspan>
+                            <elements>0</elements>
+                            <valign>0</valign>
+                            <halign>0</halign>
+                            <dynamic>0</dynamic>
+                            <sort_triggers>0</sort_triggers>
+                            <url/>
+                            <application/>
+                            <max_columns>3</max_columns>
+                        </screen_item>
+                    </screen_items>
+                </screen>
+                <screen>
+                    <name>Backup Full</name>
+                    <hsize>2</hsize>
+                    <vsize>3</vsize>
+                    <screen_items>
+                        <screen_item>
+                            <resourcetype>0</resourcetype>
+                            <style>0</style>
+                            <resource>
+                                <name>Backup Full - Bytes transferred</name>
+                                <host>Template Bacula</host>
+                            </resource>
+                            <width>500</width>
+                            <height>100</height>
+                            <x>0</x>
+                            <y>0</y>
+                            <colspan>1</colspan>
+                            <rowspan>1</rowspan>
+                            <elements>0</elements>
+                            <valign>0</valign>
+                            <halign>0</halign>
+                            <dynamic>0</dynamic>
+                            <sort_triggers>0</sort_triggers>
+                            <url/>
+                            <application/>
+                            <max_columns>3</max_columns>
+                        </screen_item>
+                        <screen_item>
+                            <resourcetype>0</resourcetype>
+                            <style>0</style>
+                            <resource>
+                                <name>Backup Full - Files transferred</name>
+                                <host>Template Bacula</host>
+                            </resource>
+                            <width>500</width>
+                            <height>100</height>
+                            <x>1</x>
+                            <y>0</y>
+                            <colspan>1</colspan>
+                            <rowspan>1</rowspan>
+                            <elements>0</elements>
+                            <valign>0</valign>
+                            <halign>0</halign>
+                            <dynamic>0</dynamic>
+                            <sort_triggers>0</sort_triggers>
+                            <url/>
+                            <application/>
+                            <max_columns>3</max_columns>
+                        </screen_item>
+                        <screen_item>
+                            <resourcetype>0</resourcetype>
+                            <style>0</style>
+                            <resource>
+                                <name>Backup Full - Elapsed time</name>
+                                <host>Template Bacula</host>
+                            </resource>
+                            <width>500</width>
+                            <height>100</height>
+                            <x>0</x>
+                            <y>1</y>
+                            <colspan>1</colspan>
+                            <rowspan>1</rowspan>
+                            <elements>0</elements>
+                            <valign>0</valign>
+                            <halign>0</halign>
+                            <dynamic>0</dynamic>
+                            <sort_triggers>0</sort_triggers>
+                            <url/>
+                            <application/>
+                            <max_columns>3</max_columns>
+                        </screen_item>
+                        <screen_item>
+                            <resourcetype>0</resourcetype>
+                            <style>0</style>
+                            <resource>
+                                <name>Backup Full - Transfer rate</name>
+                                <host>Template Bacula</host>
+                            </resource>
+                            <width>500</width>
+                            <height>100</height>
+                            <x>1</x>
+                            <y>1</y>
+                            <colspan>1</colspan>
+                            <rowspan>1</rowspan>
+                            <elements>0</elements>
+                            <valign>0</valign>
+                            <halign>0</halign>
+                            <dynamic>0</dynamic>
+                            <sort_triggers>0</sort_triggers>
+                            <url/>
+                            <application/>
+                            <max_columns>3</max_columns>
+                        </screen_item>
+                        <screen_item>
+                            <resourcetype>0</resourcetype>
+                            <style>0</style>
+                            <resource>
+                                <name>Backup Full - Compression rate</name>
+                                <host>Template Bacula</host>
+                            </resource>
+                            <width>500</width>
+                            <height>100</height>
+                            <x>0</x>
+                            <y>2</y>
+                            <colspan>1</colspan>
+                            <rowspan>1</rowspan>
+                            <elements>0</elements>
+                            <valign>0</valign>
+                            <halign>0</halign>
+                            <dynamic>0</dynamic>
+                            <sort_triggers>0</sort_triggers>
+                            <url/>
+                            <application/>
+                            <max_columns>3</max_columns>
+                        </screen_item>
+                    </screen_items>
+                </screen>
+                <screen>
+                    <name>Backup Incremental</name>
+                    <hsize>2</hsize>
+                    <vsize>3</vsize>
+                    <screen_items>
+                        <screen_item>
+                            <resourcetype>0</resourcetype>
+                            <style>0</style>
+                            <resource>
+                                <name>Backup Incremental - Bytes transferred</name>
+                                <host>Template Bacula</host>
+                            </resource>
+                            <width>500</width>
+                            <height>100</height>
+                            <x>0</x>
+                            <y>0</y>
+                            <colspan>1</colspan>
+                            <rowspan>1</rowspan>
+                            <elements>0</elements>
+                            <valign>0</valign>
+                            <halign>0</halign>
+                            <dynamic>0</dynamic>
+                            <sort_triggers>0</sort_triggers>
+                            <url/>
+                            <application/>
+                            <max_columns>3</max_columns>
+                        </screen_item>
+                        <screen_item>
+                            <resourcetype>0</resourcetype>
+                            <style>0</style>
+                            <resource>
+                                <name>Backup Incremental - Files transferred</name>
+                                <host>Template Bacula</host>
+                            </resource>
+                            <width>500</width>
+                            <height>100</height>
+                            <x>1</x>
+                            <y>0</y>
+                            <colspan>1</colspan>
+                            <rowspan>1</rowspan>
+                            <elements>0</elements>
+                            <valign>0</valign>
+                            <halign>0</halign>
+                            <dynamic>0</dynamic>
+                            <sort_triggers>0</sort_triggers>
+                            <url/>
+                            <application/>
+                            <max_columns>3</max_columns>
+                        </screen_item>
+                        <screen_item>
+                            <resourcetype>0</resourcetype>
+                            <style>0</style>
+                            <resource>
+                                <name>Backup Incremental - Elapsed time</name>
+                                <host>Template Bacula</host>
+                            </resource>
+                            <width>500</width>
+                            <height>100</height>
+                            <x>0</x>
+                            <y>1</y>
+                            <colspan>1</colspan>
+                            <rowspan>1</rowspan>
+                            <elements>0</elements>
+                            <valign>0</valign>
+                            <halign>0</halign>
+                            <dynamic>0</dynamic>
+                            <sort_triggers>0</sort_triggers>
+                            <url/>
+                            <application/>
+                            <max_columns>3</max_columns>
+                        </screen_item>
+                        <screen_item>
+                            <resourcetype>0</resourcetype>
+                            <style>0</style>
+                            <resource>
+                                <name>Backup Incremental - Transfer rate</name>
+                                <host>Template Bacula</host>
+                            </resource>
+                            <width>500</width>
+                            <height>100</height>
+                            <x>1</x>
+                            <y>1</y>
+                            <colspan>1</colspan>
+                            <rowspan>1</rowspan>
+                            <elements>0</elements>
+                            <valign>0</valign>
+                            <halign>0</halign>
+                            <dynamic>0</dynamic>
+                            <sort_triggers>0</sort_triggers>
+                            <url/>
+                            <application/>
+                            <max_columns>3</max_columns>
+                        </screen_item>
+                        <screen_item>
+                            <resourcetype>0</resourcetype>
+                            <style>0</style>
+                            <resource>
+                                <name>Backup Incremental - Compression rate</name>
+                                <host>Template Bacula</host>
+                            </resource>
+                            <width>500</width>
+                            <height>100</height>
+                            <x>0</x>
+                            <y>2</y>
+                            <colspan>1</colspan>
+                            <rowspan>1</rowspan>
+                            <elements>0</elements>
+                            <valign>0</valign>
+                            <halign>0</halign>
+                            <dynamic>0</dynamic>
+                            <sort_triggers>0</sort_triggers>
+                            <url/>
+                            <application/>
+                            <max_columns>3</max_columns>
+                        </screen_item>
+                    </screen_items>
+                </screen>
+            </screens>
+        </template>
+    </templates>
+    <graphs>
+        <graph>
+            <name>Backup Differential - Bytes transferred</name>
+            <ymin_type_1>FIXED</ymin_type_1>
+            <graph_items>
+                <graph_item>
+                    <drawtype>GRADIENT_LINE</drawtype>
+                    <color>9999FF</color>
+                    <item>
+                        <host>Template Bacula</host>
+                        <key>bacula.diff.job.bytes</key>
+                    </item>
+                </graph_item>
+                <graph_item>
+                    <sortorder>1</sortorder>
+                    <drawtype>BOLD_LINE</drawtype>
+                    <color>C80000</color>
+                    <item>
+                        <host>Template Bacula</host>
+                        <key>bacula.diff.job.status</key>
+                    </item>
+                </graph_item>
+            </graph_items>
+        </graph>
+        <graph>
+            <name>Backup Differential - Compression rate</name>
+            <ymin_type_1>FIXED</ymin_type_1>
+            <graph_items>
+                <graph_item>
+                    <drawtype>GRADIENT_LINE</drawtype>
+                    <color>FF9999</color>
+                    <item>
+                        <host>Template Bacula</host>
+                        <key>bacula.diff.job.compr</key>
+                    </item>
+                </graph_item>
+                <graph_item>
+                    <sortorder>1</sortorder>
+                    <drawtype>BOLD_LINE</drawtype>
+                    <color>C80000</color>
+                    <item>
+                        <host>Template Bacula</host>
+                        <key>bacula.diff.job.status</key>
+                    </item>
+                </graph_item>
+            </graph_items>
+        </graph>
+        <graph>
+            <name>Backup Differential - Elapsed time</name>
+            <ymin_type_1>FIXED</ymin_type_1>
+            <graph_items>
+                <graph_item>
+                    <drawtype>GRADIENT_LINE</drawtype>
+                    <color>00EEEE</color>
+                    <item>
+                        <host>Template Bacula</host>
+                        <key>bacula.diff.job.time</key>
+                    </item>
+                </graph_item>
+                <graph_item>
+                    <sortorder>1</sortorder>
+                    <drawtype>BOLD_LINE</drawtype>
+                    <color>C80000</color>
+                    <item>
+                        <host>Template Bacula</host>
+                        <key>bacula.diff.job.status</key>
+                    </item>
+                </graph_item>
+            </graph_items>
+        </graph>
+        <graph>
+            <name>Backup Differential - Files transferred</name>
+            <ymin_type_1>FIXED</ymin_type_1>
+            <graph_items>
+                <graph_item>
+                    <drawtype>GRADIENT_LINE</drawtype>
+                    <color>00C800</color>
+                    <item>
+                        <host>Template Bacula</host>
+                        <key>bacula.diff.job.files</key>
+                    </item>
+                </graph_item>
+                <graph_item>
+                    <sortorder>1</sortorder>
+                    <drawtype>BOLD_LINE</drawtype>
+                    <color>C80000</color>
+                    <item>
+                        <host>Template Bacula</host>
+                        <key>bacula.diff.job.status</key>
+                    </item>
+                </graph_item>
+            </graph_items>
+        </graph>
+        <graph>
+            <name>Backup Differential - Transfer rate</name>
+            <ymin_type_1>FIXED</ymin_type_1>
+            <graph_items>
+                <graph_item>
+                    <drawtype>GRADIENT_LINE</drawtype>
+                    <color>CCCC00</color>
+                    <item>
+                        <host>Template Bacula</host>
+                        <key>bacula.diff.job.speed</key>
+                    </item>
+                </graph_item>
+                <graph_item>
+                    <sortorder>1</sortorder>
+                    <drawtype>BOLD_LINE</drawtype>
+                    <color>C80000</color>
+                    <item>
+                        <host>Template Bacula</host>
+                        <key>bacula.diff.job.status</key>
+                    </item>
+                </graph_item>
+            </graph_items>
+        </graph>
+        <graph>
+            <name>Backup Full - Bytes transferred</name>
+            <ymin_type_1>FIXED</ymin_type_1>
+            <graph_items>
+                <graph_item>
+                    <drawtype>GRADIENT_LINE</drawtype>
+                    <color>9999FF</color>
+                    <item>
+                        <host>Template Bacula</host>
+                        <key>bacula.full.job.bytes</key>
+                    </item>
+                </graph_item>
+                <graph_item>
+                    <sortorder>1</sortorder>
+                    <drawtype>BOLD_LINE</drawtype>
+                    <color>C80000</color>
+                    <item>
+                        <host>Template Bacula</host>
+                        <key>bacula.full.job.status</key>
+                    </item>
+                </graph_item>
+            </graph_items>
+        </graph>
+        <graph>
+            <name>Backup Full - Compression rate</name>
+            <ymin_type_1>FIXED</ymin_type_1>
+            <graph_items>
+                <graph_item>
+                    <drawtype>GRADIENT_LINE</drawtype>
+                    <color>FF9999</color>
+                    <item>
+                        <host>Template Bacula</host>
+                        <key>bacula.full.job.compr</key>
+                    </item>
+                </graph_item>
+                <graph_item>
+                    <sortorder>1</sortorder>
+                    <drawtype>BOLD_LINE</drawtype>
+                    <color>C80000</color>
+                    <item>
+                        <host>Template Bacula</host>
+                        <key>bacula.full.job.status</key>
+                    </item>
+                </graph_item>
+            </graph_items>
+        </graph>
+        <graph>
+            <name>Backup Full - Elapsed time</name>
+            <ymin_type_1>FIXED</ymin_type_1>
+            <graph_items>
+                <graph_item>
+                    <drawtype>GRADIENT_LINE</drawtype>
+                    <color>00EEEE</color>
+                    <item>
+                        <host>Template Bacula</host>
+                        <key>bacula.full.job.time</key>
+                    </item>
+                </graph_item>
+                <graph_item>
+                    <sortorder>1</sortorder>
+                    <drawtype>BOLD_LINE</drawtype>
+                    <color>C80000</color>
+                    <item>
+                        <host>Template Bacula</host>
+                        <key>bacula.full.job.status</key>
+                    </item>
+                </graph_item>
+            </graph_items>
+        </graph>
+        <graph>
+            <name>Backup Full - Files transferred</name>
+            <ymin_type_1>FIXED</ymin_type_1>
+            <graph_items>
+                <graph_item>
+                    <drawtype>GRADIENT_LINE</drawtype>
+                    <color>00C800</color>
+                    <item>
+                        <host>Template Bacula</host>
+                        <key>bacula.full.job.files</key>
+                    </item>
+                </graph_item>
+                <graph_item>
+                    <sortorder>1</sortorder>
+                    <drawtype>BOLD_LINE</drawtype>
+                    <color>C80000</color>
+                    <item>
+                        <host>Template Bacula</host>
+                        <key>bacula.full.job.status</key>
+                    </item>
+                </graph_item>
+            </graph_items>
+        </graph>
+        <graph>
+            <name>Backup Full - Transfer rate</name>
+            <ymin_type_1>FIXED</ymin_type_1>
+            <graph_items>
+                <graph_item>
+                    <drawtype>GRADIENT_LINE</drawtype>
+                    <color>CCCC00</color>
+                    <item>
+                        <host>Template Bacula</host>
+                        <key>bacula.full.job.speed</key>
+                    </item>
+                </graph_item>
+                <graph_item>
+                    <sortorder>1</sortorder>
+                    <drawtype>BOLD_LINE</drawtype>
+                    <color>C80000</color>
+                    <item>
+                        <host>Template Bacula</host>
+                        <key>bacula.full.job.status</key>
+                    </item>
+                </graph_item>
+            </graph_items>
+        </graph>
+        <graph>
+            <name>Backup Incremental - Bytes transferred</name>
+            <ymin_type_1>FIXED</ymin_type_1>
+            <graph_items>
+                <graph_item>
+                    <drawtype>GRADIENT_LINE</drawtype>
+                    <color>9999FF</color>
+                    <item>
+                        <host>Template Bacula</host>
+                        <key>bacula.incr.job.bytes</key>
+                    </item>
+                </graph_item>
+                <graph_item>
+                    <sortorder>1</sortorder>
+                    <drawtype>BOLD_LINE</drawtype>
+                    <color>C80000</color>
+                    <item>
+                        <host>Template Bacula</host>
+                        <key>bacula.incr.job.status</key>
+                    </item>
+                </graph_item>
+            </graph_items>
+        </graph>
+        <graph>
+            <name>Backup Incremental - Compression rate</name>
+            <ymin_type_1>FIXED</ymin_type_1>
+            <graph_items>
+                <graph_item>
+                    <drawtype>GRADIENT_LINE</drawtype>
+                    <color>FF9999</color>
+                    <item>
+                        <host>Template Bacula</host>
+                        <key>bacula.incr.job.compr</key>
+                    </item>
+                </graph_item>
+                <graph_item>
+                    <sortorder>1</sortorder>
+                    <drawtype>BOLD_LINE</drawtype>
+                    <color>C80000</color>
+                    <item>
+                        <host>Template Bacula</host>
+                        <key>bacula.incr.job.status</key>
+                    </item>
+                </graph_item>
+            </graph_items>
+        </graph>
+        <graph>
+            <name>Backup Incremental - Elapsed time</name>
+            <ymin_type_1>FIXED</ymin_type_1>
+            <graph_items>
+                <graph_item>
+                    <drawtype>GRADIENT_LINE</drawtype>
+                    <color>00EEEE</color>
+                    <item>
+                        <host>Template Bacula</host>
+                        <key>bacula.incr.job.time</key>
+                    </item>
+                </graph_item>
+                <graph_item>
+                    <sortorder>1</sortorder>
+                    <drawtype>BOLD_LINE</drawtype>
+                    <color>C80000</color>
+                    <item>
+                        <host>Template Bacula</host>
+                        <key>bacula.incr.job.status</key>
+                    </item>
+                </graph_item>
+            </graph_items>
+        </graph>
+        <graph>
+            <name>Backup Incremental - Files transferred</name>
+            <ymin_type_1>FIXED</ymin_type_1>
+            <graph_items>
+                <graph_item>
+                    <drawtype>GRADIENT_LINE</drawtype>
+                    <color>00C800</color>
+                    <item>
+                        <host>Template Bacula</host>
+                        <key>bacula.incr.job.files</key>
+                    </item>
+                </graph_item>
+                <graph_item>
+                    <sortorder>1</sortorder>
+                    <drawtype>BOLD_LINE</drawtype>
+                    <color>C80000</color>
+                    <item>
+                        <host>Template Bacula</host>
+                        <key>bacula.incr.job.status</key>
+                    </item>
+                </graph_item>
+            </graph_items>
+        </graph>
+        <graph>
+            <name>Backup Incremental - Transfer rate</name>
+            <ymin_type_1>FIXED</ymin_type_1>
+            <graph_items>
+                <graph_item>
+                    <drawtype>GRADIENT_LINE</drawtype>
+                    <color>CCCC00</color>
+                    <item>
+                        <host>Template Bacula</host>
+                        <key>bacula.incr.job.speed</key>
+                    </item>
+                </graph_item>
+                <graph_item>
+                    <sortorder>1</sortorder>
+                    <drawtype>BOLD_LINE</drawtype>
+                    <color>C80000</color>
+                    <item>
+                        <host>Template Bacula</host>
+                        <key>bacula.incr.job.status</key>
+                    </item>
+                </graph_item>
+            </graph_items>
+        </graph>
+    </graphs>
+</zabbix_export>
