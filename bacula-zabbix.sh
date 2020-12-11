@@ -12,8 +12,8 @@ if [ ! -x $zabbixSender ] ; then exit 5 ; fi
 
 # Chose which database command to use
 case $baculaDbSgdb in
-  P) sql="PGPASSWORD=$baculaDbPass /usr/bin/psql -h$baculaDbAddr -p$baculaDbPort -U$baculaDbUser -d$baculaDbName -c" ;;
-  M) sql="/usr/bin/mysql -NB -h$baculaDbAddr -P$baculaDbPort -u$baculaDbUser -p$baculaDbPass -D$baculaDbName -e" ;;
+  P) sql="PGPASSWORD=$baculaDbPass $psqlBinary -h$baculaDbAddr -p$baculaDbPort -U$baculaDbUser -d$baculaDbName -c" ;;
+  M) sql="$mysqlBinary -NB -h$baculaDbAddr -P$baculaDbPort -u$baculaDbUser -p$baculaDbPass -D$baculaDbName -e" ;;
   *) exit 7 ;;
 esac
 
