@@ -3,6 +3,8 @@
 # Import configuration file
 source /etc/bacula/bacula-zabbix.conf
 
+clientName=${clientName:-Client.Name}
+
 # Get Job ID from parameter
 baculaJobId="$1"
 if [ -z $baculaJobId ] ; then exit 3 ; fi
@@ -40,7 +42,7 @@ case $baculaJobStatus in
 esac
 
 # Get client's name from database
-baculaClientName=$($sql "select Client.Name from Client,Job where Job.ClientId=Client.ClientId and Job.JobId=$baculaJobId;" 2>/dev/null)
+baculaClientName=$($sql "select $clientName from Client,Job where Job.ClientId=Client.ClientId and Job.JobId=$baculaJobId;" 2>/dev/null)
 if [ -z $baculaClientName ] ; then exit 15 ; fi
 
 # Initialize return as zero
