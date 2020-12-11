@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Import configuration file
-source /etc/bacula/bacula-zabbix.conf
+source ${BACULA_ZABBIX_CONFIG:-/etc/bacula/bacula-zabbix.conf}
 
 # Get Job ID from parameter
 baculaJobId="$1"
