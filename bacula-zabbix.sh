@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Import configuration file
 source /etc/bacula/bacula-zabbix.conf
