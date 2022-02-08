@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -euo pipefail
+
 # Import configuration file
 source /etc/bacula/bacula-zabbix.conf
 
@@ -12,7 +14,10 @@ if [ ! -x $zabbixSender ] ; then exit 5 ; fi
 
 # Chose which database command to use
 case $baculaDbSgdb in
-  P) sql="PGPASSWORD=$baculaDbPass /usr/bin/psql -h$baculaDbAddr -p$baculaDbPort -U$baculaDbUser -d$baculaDbName -c" ;;
+  P)
+    EXPORT PGPASSWORD="$baculaDbPass"
+    sql="/usr/bin/psql -h$baculaDbAddr -p$baculaDbPort -U$baculaDbUser -d$baculaDbName -c"
+    ;;
   M) sql="/usr/bin/mysql -NB -h$baculaDbAddr -P$baculaDbPort -u$baculaDbUser -p$baculaDbPass -D$baculaDbName -e" ;;
   *) exit 7 ;;
 esac
